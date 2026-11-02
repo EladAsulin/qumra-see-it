@@ -40,7 +40,7 @@ h1 i{font-style:italic;color:var(--line)}
 
 nav{position:sticky;top:0;z-index:10;background:rgba(13,17,23,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
 nav .wrap{display:flex;gap:28px;align-items:center;height:54px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
-nav b{font-family:Fraunces,serif;text-transform:none;letter-spacing:0;font-size:17px;font-weight:500;margin-right:auto}
+nav b{flex:none;font-family:Fraunces,serif;text-transform:none;letter-spacing:0;font-size:17px;font-weight:500;margin-right:auto}
 nav a{text-decoration:none;color:var(--muted)}
 nav a:hover{color:var(--ink)}
 
@@ -122,7 +122,9 @@ footer .logo{font-family:Fraunces,serif;font-size:28px;color:var(--ink);letter-s
   .hero{height:min(62vh,520px)}
   .legend{font-size:9px;letter-spacing:.16em;padding:0 12px}
   .hero .copy{bottom:28px}
-  nav a.hide-s{display:none}
+  nav .wrap{gap:14px;font-size:11.5px;letter-spacing:.08em;overflow-x:auto;white-space:nowrap}
+  nav b{display:none}
+  nav a:first-of-type{margin-left:0}
 }
 </style>
 </head>
@@ -133,7 +135,7 @@ footer .logo{font-family:Fraunces,serif;font-size:28px;color:var(--ink);letter-s
   <div class="copy">
     <div class="eyebrow">Qumra Capital · Brand film</div>
     <h1>Same Move. Two Worlds.</h1>
-    <p class="sub">A brand film for Qumra Capital · Draft 1 · approx. 75 sec</p>
+    <p class="sub">A brand film for Qumra Capital · Draft 2 · approx. 75 sec</p>
   </div>
 </div>
 <nav><div class="wrap"><b>Qumra Capital</b><a href="#inspiration">Inspiration</a><a href="#script">See / Hear</a><a href="#vo">Voice-over</a></div></nav>
