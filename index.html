@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Qumra Capital · Same Move. Two Worlds.</title>
+<meta property="og:title" content="Qumra Capital · Same Move. Two Worlds.">
+<meta property="og:description" content="Inspiration and SEE / HEAR script for the Qumra Capital brand film.">
+<meta property="og:image" content="https://eladasulin.github.io/qumra-see-it/shots/hero_split.jpg">
+<meta property="og:url" content="https://eladasulin.github.io/qumra-see-it/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d1117; --panel:#141a23; --panel2:#1a212c; --ink:#f3ede2; --muted:#a9a397;
+  --line:#f6d9a0; --biz:#8fb6ff; --life:#ffb38a; --rule:rgba(243,237,226,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* hero: the split itself */
+.hero{position:relative;height:min(88vh,760px);overflow:hidden;background:#000 url(shots/hero_split.jpg) center/cover no-repeat}
+.hero::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-1px);
+  background:var(--line);box-shadow:0 0 18px 3px rgba(246,217,160,.7)}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,17,23,.15) 0%,rgba(13,17,23,0) 40%,rgba(13,17,23,.85) 100%)}
+.hero .copy{position:absolute;left:0;right:0;bottom:56px;text-align:center;padding:0 24px;z-index:2}
+.eyebrow{letter-spacing:.32em;text-transform:uppercase;font-size:12px;font-weight:600;color:var(--line)}
+h1{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:clamp(42px,7vw,96px);line-height:1;margin:14px 0 12px;letter-spacing:-.01em}
+h1 i{font-style:italic;color:var(--line)}
+.hero .sub{color:#e7e1d6;font-size:15px}
+.legend{position:absolute;top:22px;left:0;right:0;display:flex;justify-content:space-between;padding:0 24px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;z-index:2}
+.legend span{background:rgba(13,17,23,.55);padding:6px 10px;border-radius:20px}
+
+nav{position:sticky;top:0;z-index:10;background:rgba(13,17,23,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;gap:28px;align-items:center;height:54px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+nav b{font-family:Fraunces,serif;text-transform:none;letter-spacing:0;font-size:17px;font-weight:500;margin-right:auto}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+
+.intro{padding:72px 0 24px}
+.intro p{font-family:Fraunces,serif;font-weight:300;font-size:clamp(20px,2.4vw,27px);line-height:1.45;max-width:880px}
+.key{display:flex;gap:22px;margin-top:26px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.key i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:middle}
+
+h2{font-family:Fraunces,serif;font-weight:400;font-size:clamp(30px,4vw,46px);margin:88px 0 8px}
+.lead{color:var(--muted);max-width:640px;margin-bottom:36px}
+
+/* inspiration */
+.films{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.film{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.film-head{display:flex;gap:14px;align-items:baseline}
+.idx{font-family:Fraunces,serif;color:var(--line);font-size:22px}
+.film h3{font-family:Fraunces,serif;font-weight:500;font-size:22px;line-height:1.2}
+.film h3 em{font-weight:300;color:var(--muted)}
+.credit{font-size:12.5px;color:var(--muted);margin-top:4px}
+.frames{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.frames img{aspect-ratio:16/9;object-fit:cover;width:100%;border-radius:6px;transition:transform .25s}
+.frames a:hover img{transform:scale(1.04)}
+.film p{font-size:14.5px}
+.take{color:var(--muted)}
+.take b{color:var(--ink);font-weight:600}
+.watch{margin-top:auto;align-self:flex-start;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em;
+  border:1px solid var(--line);color:var(--line);padding:9px 16px;border-radius:30px}
+.watch:hover{background:var(--line);color:var(--bg)}
+
+/* script */
+.colhead{display:grid;grid-template-columns:1.7fr 1fr;gap:0;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--line);
+  padding:0 0 10px;border-bottom:1px solid var(--rule);position:sticky;top:54px;background:var(--bg);z-index:5;padding-top:12px}
+.colhead span:last-child{padding-left:28px}
+.shot{border-bottom:1px solid var(--rule);padding:30px 0}
+.shot header{display:flex;align-items:baseline;gap:16px;margin-bottom:16px}
+.num{font-family:Fraunces,serif;font-size:34px;color:var(--line);line-height:1;min-width:48px}
+.shot h3{font-family:Fraunces,serif;font-weight:500;font-size:24px;flex:1}
+.time{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px}
+.cols{display:grid;grid-template-columns:1.7fr 1fr}
+.see{padding-right:28px}
+.hear{padding-left:28px;border-left:1px solid var(--rule);display:flex;flex-direction:column;gap:14px}
+.halves{display:grid;grid-template-columns:1fr 1fr;position:relative;background:var(--panel);border-radius:12px;overflow:hidden}
+.halves::after{content:"";position:absolute;left:50%;top:12px;bottom:12px;width:2px;transform:translateX(-1px);background:var(--line);box-shadow:0 0 12px 1px rgba(246,217,160,.55)}
+.half{padding:18px 22px}
+.half p{font-size:15px}
+.tag{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:6px}
+.biz .tag{color:var(--biz)}
+.life .tag{color:var(--life)}
+.lab{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+.match{margin-top:14px;font-size:14.5px;color:#e5dccb}
+.match .lab{color:var(--line)}
+.super{margin-top:14px;font-family:Inter,sans-serif;font-weight:600;letter-spacing:.14em;font-size:15px;color:var(--ink);
+  border:1px solid var(--rule);display:inline-block;padding:7px 12px;border-radius:6px}
+.sound{font-size:15px}
+.vo{font-family:Fraunces,serif;font-style:italic;font-size:21px;line-height:1.35;color:var(--line)}
+.vo .lab{font-family:Inter,sans-serif;font-style:normal}
+
+footer{padding:80px 0 60px;color:var(--muted);font-size:13px;text-align:center}
+footer .logo{font-family:Fraunces,serif;font-size:28px;color:var(--ink);letter-spacing:.04em;margin-bottom:6px}
+
+@media (max-width:860px){
+  .films{grid-template-columns:1fr}
+  .colhead{display:none}
+  .cols{grid-template-columns:1fr}
+  .see{padding-right:0}
+  .hear{padding-left:0;border-left:0;border-top:1px solid var(--rule);margin-top:18px;padding-top:16px}
+  .hear::before{content:"Hear";font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--line)}
+  .see::before{content:"See";display:block;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--line);margin-bottom:10px}
+  nav .wrap{gap:16px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .halves{grid-template-columns:1fr}
+  .halves::after{left:16px;right:16px;top:50%;bottom:auto;width:auto;height:2px;transform:translateY(-1px)}
+  .hero{height:min(62vh,520px)}
+  .legend{font-size:9px;letter-spacing:.16em;padding:0 12px}
+  .hero .copy{bottom:28px}
+  nav a.hide-s{display:none}
+}
+</style>
+</head>
+<body>
+<div class="hero">
+    <div class="shade"></div>
+  <div class="legend"><span>Method test · the scoop</span><span>becomes the wave</span></div>
+  <div class="copy">
+    <div class="eyebrow">Qumra Capital · Brand film</div>
+    <h1>Same Move. Two Worlds.</h1>
+    <p class="sub">A brand film for Qumra Capital · Draft 1 · approx. 75 sec</p>
+  </div>
+</div>
+<nav><div class="wrap"><b>Qumra Capital</b><a href="#inspiration">Inspiration</a><a href="#script">See / Hear</a></div></nav>
+
+<main class="wrap">
+  <div class="intro">
+    <p>Every shot is a split screen. One half is the business of growth: capital, founders, numbers, decisions. The other half is what that growth is for: the pleasure of a life well lived. A single shape or movement crosses the dividing line and joins the two worlds, so the cut feels like one continuous gesture. Smart investment on one side, the joy it makes possible on the other.</p>
+    <div class="key"><span><i style="background:var(--biz)"></i>Business half</span><span><i style="background:var(--life)"></i>Lifestyle half</span><span><i style="background:var(--line)"></i>The line that joins them</span></div>
+  </div>
+
+  <h2 id="inspiration">Inspiration</h2>
+  <p class="lead">Six split-screen films that show the language we are building on. Tap a frame to enlarge it.</p>
+  <div class="films">
+    <article class="film">
+      <div class="film-head">
+        <span class="idx">01</span>
+        <div><h3>Häagen-Dazs <em>Love the Mix</em></h3><p class="credit">Forsman &amp; Bodenfors · dir. Torben Kjelstrup · 2021</p></div>
+      </div>
+      <div class="frames"><a href="shots/haagen_1.jpg" target="_blank" rel="noopener"><img src="shots/haagen_1.jpg" alt="Häagen-Dazs frame 1" loading="lazy"></a><a href="shots/haagen_2.jpg" target="_blank" rel="noopener"><img src="shots/haagen_2.jpg" alt="Häagen-Dazs frame 2" loading="lazy"></a><a href="shots/haagen_3.jpg" target="_blank" rel="noopener"><img src="shots/haagen_3.jpg" alt="Häagen-Dazs frame 3" loading="lazy"></a></div>
+      <p>A horizontal split joins two worlds into one strange, happy body: a marching band on the street above, swimmers&#x27; legs underwater below.</p>
+      <p class="take"><b>Why it matters:</b> Two halves that read as one: the format itself says &#x27;two flavours, one experience&#x27;.</p>
+      <a class="watch" href="https://www.youtube.com/watch?v=je0B67Yv-9o" target="_blank" rel="noopener">Watch the film ↗</a>
+    </article>
+    <article class="film">
+      <div class="film-head">
+        <span class="idx">02</span>
+        <div><h3>Carvana <em>The Feeling</em></h3><p class="credit">Stadium · dir. Ryan Simpson · 2021</p></div>
+      </div>
+      <div class="frames"><a href="shots/carvana_1.jpg" target="_blank" rel="noopener"><img src="shots/carvana_1.jpg" alt="Carvana frame 1" loading="lazy"></a><a href="shots/carvana_2.jpg" target="_blank" rel="noopener"><img src="shots/carvana_2.jpg" alt="Carvana frame 2" loading="lazy"></a><a href="shots/carvana_3.jpg" target="_blank" rel="noopener"><img src="shots/carvana_3.jpg" alt="Carvana frame 3" loading="lazy"></a></div>
+      <p>One half shows the transaction on a tablet, the other half is already the celebration: a pool dive, a party. The dividing line moves and changes direction with the action.</p>
+      <p class="take"><b>Why it matters:</b> Business on one side, the pleasure it unlocks on the other. That is the exact structure of our film.</p>
+      <a class="watch" href="https://www.youtube.com/watch?v=O8RN3JUy7Ic" target="_blank" rel="noopener">Watch the film ↗</a>
+    </article>
+    <article class="film">
+      <div class="film-head">
+        <span class="idx">03</span>
+        <div><h3>Air New Zealand Airpoints <em>OneSmart</em></h3><p class="credit">MercerBell · 2012</p></div>
+      </div>
+      <div class="frames"><a href="shots/airnz_1.jpg" target="_blank" rel="noopener"><img src="shots/airnz_1.jpg" alt="Air New Zealand Airpoints frame 1" loading="lazy"></a><a href="shots/airnz_2.jpg" target="_blank" rel="noopener"><img src="shots/airnz_2.jpg" alt="Air New Zealand Airpoints frame 2" loading="lazy"></a><a href="shots/airnz_3.jpg" target="_blank" rel="noopener"><img src="shots/airnz_3.jpg" alt="Air New Zealand Airpoints frame 3" loading="lazy"></a></div>
+      <p>Two places, one composition: a beach, bare feet in two sands, a bridge in two countries. The lines continue across the split.</p>
+      <p class="take"><b>Why it matters:</b> Matching horizon, camera height and movement so the eye reads two worlds as one frame.</p>
+      <a class="watch" href="https://www.youtube.com/watch?v=v4nwTjOkoDo" target="_blank" rel="noopener">Watch the film ↗</a>
+    </article>
+    <article class="film">
+      <div class="film-head">
+        <span class="idx">04</span>
+        <div><h3>Cassius ft. Cat Power &amp; Pharrell Williams <em>Go Up (music video)</em></h3><p class="credit">Division · dir. Alexandre Courtès · 2017</p></div>
+      </div>
+      <div class="frames"><a href="shots/cassius_1.jpg" target="_blank" rel="noopener"><img src="shots/cassius_1.jpg" alt="Cassius ft. Cat Power &amp; Pharrell Williams frame 1" loading="lazy"></a><a href="shots/cassius_2.jpg" target="_blank" rel="noopener"><img src="shots/cassius_2.jpg" alt="Cassius ft. Cat Power &amp; Pharrell Williams frame 2" loading="lazy"></a><a href="shots/cassius_3.jpg" target="_blank" rel="noopener"><img src="shots/cassius_3.jpg" alt="Cassius ft. Cat Power &amp; Pharrell Williams frame 3" loading="lazy"></a></div>
+      <p>The whole clip is a split screen. Shapes and movements carry from one half to the other: a statue&#x27;s arms, a rocket&#x27;s plume, a cue and a splash.</p>
+      <p class="take"><b>Why it matters:</b> Shape match-cuts across the line: the playful, surprising pairings we want between finance and lifestyle.</p>
+      <a class="watch" href="https://www.youtube.com/watch?v=rAJXg-Ubv3Y" target="_blank" rel="noopener">Watch the film ↗</a>
+    </article>
+    <article class="film">
+      <div class="film-head">
+        <span class="idx">05</span>
+        <div><h3>Movistar <em>Connected</em></h3><p class="credit">Y&amp;R Peru · Fat Free Films · 2010</p></div>
+      </div>
+      <div class="frames"><a href="shots/movistar_1.jpg" target="_blank" rel="noopener"><img src="shots/movistar_1.jpg" alt="Movistar frame 1" loading="lazy"></a><a href="shots/movistar_2.jpg" target="_blank" rel="noopener"><img src="shots/movistar_2.jpg" alt="Movistar frame 2" loading="lazy"></a><a href="shots/movistar_3.jpg" target="_blank" rel="noopener"><img src="shots/movistar_3.jpg" alt="Movistar frame 3" loading="lazy"></a></div>
+      <p>Strangers are joined through split screens: one face made of two children&#x27;s halves, a goalkeeper and a volleyball player in one move.</p>
+      <p class="take"><b>Why it matters:</b> Partnership made visible: two people completing one gesture.</p>
+      <a class="watch" href="https://www.youtube.com/watch?v=qpN2v6oXKeY" target="_blank" rel="noopener">Watch the film ↗</a>
+    </article>
+    <article class="film">
+      <div class="film-head">
+        <span class="idx">06</span>
+        <div><h3>Nike <em>You Can&#x27;t Stop Us</em></h3><p class="credit">Wieden+Kennedy Portland · dir. Oscar Hudson · 2020 · Cannes Lions Film Grand Prix</p></div>
+      </div>
+      <div class="frames"><a href="shots/nike_1.jpg" target="_blank" rel="noopener"><img src="shots/nike_1.jpg" alt="Nike frame 1" loading="lazy"></a><a href="shots/nike_2.jpg" target="_blank" rel="noopener"><img src="shots/nike_2.jpg" alt="Nike frame 2" loading="lazy"></a><a href="shots/nike_3.jpg" target="_blank" rel="noopener"><img src="shots/nike_3.jpg" alt="Nike frame 3" loading="lazy"></a></div>
+      <p>90 seconds, 36 split-screen pairs chosen from about 4,000 clips. Each pair is matched in motion, colour and composition, so the centre line disappears.</p>
+      <p class="take"><b>Why it matters:</b> The benchmark for precision: when the match is exact, two people in two places become one movement.</p>
+      <a class="watch" href="https://www.youtube.com/watch?v=pcXTnyCmQbg" target="_blank" rel="noopener">Watch the film ↗</a>
+    </article></div>
+
+  <h2 id="script">See / Hear</h2>
+  <p class="lead">Shot by shot. On the left, what we see in each half of the split screen and the shape that joins them. On the right, what we hear.</p>
+  <div class="colhead"><span>See</span><span>Hear</span></div>
+  
+    <section class="shot">
+      <header><span class="num">01</span><h3>The signature</h3><span class="time">0:00–0:05</span></header>
+      <div class="cols">
+        <div class="see">
+          <div class="halves">
+            <div class="half biz"><span class="tag">Business</span><p>Extreme close-up. A pen finishes a signature on a term sheet; the last stroke loops upward in one smooth curl.</p></div>
+            <div class="half life"><span class="tag">Lifestyle</span><p>The curl continues as a spoon rolling a perfect scoop of gelato on a sunny café table.</p></div>
+          </div>
+          <p class="match"><span class="lab">The match</span>The loop of the signature becomes the curl of the scoop.</p>
+          <p class="super">SEE IT.</p>
+        </div>
+        <div class="hear">
+          <p class="sound"><span class="lab">Sound</span>Pen nib scratching paper, then the soft, wet drag of the spoon.</p>
+          
+        </div>
+      </div>
+    </section>
+    <section class="shot">
+      <header><span class="num">02</span><h3>Every curve starts small</h3><span class="time">0:05–0:12</span></header>
+      <div class="cols">
+        <div class="see">
+          <div class="halves">
+            <div class="half biz"><span class="tag">Business</span><p>A founder draws a growth curve on a glass wall with a marker. It climbs steeply and pitches forward at the top.</p></div>
+            <div class="half life"><span class="tag">Lifestyle</span><p>The line is now the lip of a wave. A surfer drops in and rides the outer face, right where the marker ended.</p></div>
+          </div>
+          <p class="match"><span class="lab">The match</span>The growth curve becomes the breaking wave.</p>
+          
+        </div>
+        <div class="hear">
+          <p class="sound"><span class="lab">Sound</span>Marker squeak stretches into the roar of surf.</p>
+          <p class="vo"><span class="lab">Voice-over</span>Every great curve starts small.</p>
+        </div>
+      </div>
+    </section>
+    <section class="shot">
+      <header><span class="num">03</span><h3>PMF. Revenue. Scale.</h3><span class="time">0:12–0:19</span></header>
+      <div class="cols">
+        <div class="see">
+          <div class="halves">
+            <div class="half biz"><span class="tag">Business</span><p>A dashboard. Three bars rise one after another, each taller than the last.</p></div>
+            <div class="half life"><span class="tag">Lifestyle</span><p>Three glasses on a rooftop bar fill with sparkling wine to the exact same heights, the sun setting behind them.</p></div>
+          </div>
+          <p class="match"><span class="lab">The match</span>Bars become glasses, filling in sync.</p>
+          <p class="super">PMF. → REVENUE. → SCALE.</p>
+        </div>
+        <div class="hear">
+          <p class="sound"><span class="lab">Sound</span>A rising tick on every bar, answered by a glass clink.</p>
+          <p class="vo"><span class="lab">Voice-over</span>Product–market fit. Revenue. Scale.</p>
+        </div>
+      </div>
+    </section>
+    <section class="shot">
+      <header><span class="num">04</span><h3>Shared risk</h3><span class="time">0:19–0:26</span></header>
+      <div class="cols">
+        <div class="see">
+          <div class="halves">
+            <div class="half biz"><span class="tag">Business</span><p>A Qumra partner and a founder shake hands across a table; the handshake turns into a firm pull.</p></div>
+            <div class="half life"><span class="tag">Lifestyle</span><p>On a sea cliff, one climber grips the other&#x27;s wrist and pulls them up onto the top. The arms cross the line as one arm.</p></div>
+          </div>
+          <p class="match"><span class="lab">The match</span>Handshake becomes a climber&#x27;s grip; one continuous arm across the divide.</p>
+          <p class="super">SHARED RISK.</p>
+        </div>
+        <div class="hear">
+          <p class="sound"><span class="lab">Sound</span>Chair scrape, then wind and rope, and a breath of relief.</p>
+          <p class="vo"><span class="lab">Voice-over</span>We don&#x27;t invest from the sidelines.</p>
+        </div>
+      </div>
+    </section>
+    <section class="shot">
+      <header><span class="num">05</span><h3>Hands-on</h3><span class="time">0:26–0:32</span></header>
+      <div class="cols">
+        <div class="see">
+          <div class="halves">
+            <div class="half biz"><span class="tag">Business</span><p>Rolled-up sleeves; hands move components on a prototype circuit board.</p></div>
+            <div class="half life"><span class="tag">Lifestyle</span><p>The same hands, same motion, shape wet clay rising on a pottery wheel.</p></div>
+          </div>
+          <p class="match"><span class="lab">The match</span>The hands never stop moving; only the material changes.</p>
+          <p class="super">HANDS-ON.</p>
+        </div>
+        <div class="hear">
+          <p class="sound"><span class="lab">Sound</span>Tiny clicks of components, blending into the hum of the wheel.</p>
+          <p class="vo"><span class="lab">Voice-over</span>We get our hands in it.</p>
+        </div>
+      </div>
+    </section>
+    <section class="shot">
+      <header><span class="num">06</span><h3>Meticulous attention</h3><span class="time">0:32–0:38</span></header>
+      <div class="cols">
+        <div class="see">
+          <div class="halves">
+            <div class="half biz"><span class="tag">Business</span><p>A highlighter draws one precise line across a due-diligence report.</p></div>
+            <div class="half life"><span class="tag">Lifestyle</span><p>A barista pours steamed milk in one precise line that blooms into latte art.</p></div>
+          </div>
+          <p class="match"><span class="lab">The match</span>The highlighter stroke continues as the stream of milk.</p>
+          <p class="super">METICULOUS ATTENTION.</p>
+        </div>
+        <div class="hear">
+          <p class="sound"><span class="lab">Sound</span>Felt-tip squeak, then the pour.</p>
+          <p class="vo"><span class="lab">Voice-over</span>Every detail.</p>
+        </div>
+      </div>
+    </section>
+    <section class="shot">
+      <header><span class="num">07</span><h3>The spin</h3><span class="time">0:38–0:45</span></header>
+      <div class="cols">
+        <div class="see">
+          <div class="halves">
+            <div class="half biz"><span class="tag">Business</span><p>A coin spins on a polished boardroom table.</p></div>
+            <div class="half life"><span class="tag">Lifestyle</span><p>A vinyl record starts spinning on a turntable at a beach party at dusk.</p></div>
+          </div>
+          <p class="match"><span class="lab">The match</span>The spinning coin becomes the spinning record.</p>
+          <p class="super">CLARITY → CONVICTION</p>
+        </div>
+        <div class="hear">
+          <p class="sound"><span class="lab">Sound</span>The coin&#x27;s ring slows, the needle drops, the beat kicks in.</p>
+          <p class="vo"><span class="lab">Voice-over</span>Clarity. Then conviction.</p>
+        </div>
+      </div>
+    </section>
+    <section class="shot">
+      <header><span class="num">08</span><h3>The numbers</h3><span class="time">0:45–0:52</span></header>
+      <div class="cols">
+        <div class="see">
+          <div class="halves">
+            <div class="half biz"><span class="tag">Business</span><p>A wall of founder portraits flips tile by tile, faster and faster.</p></div>
+            <div class="half life"><span class="tag">Lifestyle</span><p>Swimmers dive into a long outdoor pool one after another, in the same rhythm as the tiles.</p></div>
+          </div>
+          <p class="match"><span class="lab">The match</span>Each tile flip lands with a dive.</p>
+          <p class="super">26 COMPANIES · 5 UNICORNS · $1B AUM   (numbers to be confirmed)</p>
+        </div>
+        <div class="hear">
+          <p class="sound"><span class="lab">Sound</span>A hit on every flip and splash.</p>
+          
+        </div>
+      </div>
+    </section>
+    <section class="shot">
+      <header><span class="num">09</span><h3>The bell</h3><span class="time">0:52–0:58</span></header>
+      <div class="cols">
+        <div class="see">
+          <div class="halves">
+            <div class="half biz"><span class="tag">Business</span><p>An opening bell is rung on the floor of a stock exchange.</p></div>
+            <div class="half life"><span class="tag">Lifestyle</span><p>A kid rings a bicycle bell riding along the Tel Aviv promenade at sunset.</p></div>
+          </div>
+          <p class="match"><span class="lab">The match</span>Same hand, same ring, across the line.</p>
+          <p class="super">4 IPOs · 4 ACQUISITIONS</p>
+        </div>
+        <div class="hear">
+          <p class="sound"><span class="lab">Sound</span>The exchange bell and the bike bell ring as one note.</p>
+          
+        </div>
+      </div>
+    </section>
+    <section class="shot">
+      <header><span class="num">10</span><h3>Local roots, global reach</h3><span class="time">0:58–1:05</span></header>
+      <div class="cols">
+        <div class="see">
+          <div class="halves">
+            <div class="half biz"><span class="tag">Business</span><p>An investor&#x27;s screen: a world map with flight lines arcing out from Tel Aviv.</p></div>
+            <div class="half life"><span class="tag">Lifestyle</span><p>Over a Tel Aviv beach, contrails cross the sky above friends playing matkot.</p></div>
+          </div>
+          <p class="match"><span class="lab">The match</span>The flight arcs on the map continue as real contrails.</p>
+          <p class="super">GROW LOCALLY. LEAD GLOBALLY.</p>
+        </div>
+        <div class="hear">
+          <p class="sound"><span class="lab">Sound</span>The pock of the matkot ball, sea, a distant plane.</p>
+          <p class="vo"><span class="lab">Voice-over</span>We grow here. We lead everywhere.</p>
+        </div>
+      </div>
+    </section>
+    <section class="shot">
+      <header><span class="num">11</span><h3>One horizon</h3><span class="time">1:05–1:15</span></header>
+      <div class="cols">
+        <div class="see">
+          <div class="halves">
+            <div class="half biz"><span class="tag">Business</span><p>The dividing line slowly slides away. Founders and partners walk out of the office toward the sea.</p></div>
+            <div class="half life"><span class="tag">Lifestyle</span><p>The same people, now on the beach at sunrise, walk toward the horizon together. For the first time the frame is whole.</p></div>
+          </div>
+          <p class="match"><span class="lab">The match</span>The split line becomes the horizon, then shrinks to a single point of light, and the point becomes the logo.</p>
+          <p class="super">SEE IT. LEAD IT. · QUMRA CAPITAL</p>
+        </div>
+        <div class="hear">
+          <p class="sound"><span class="lab">Sound</span>Everything drops out except the sea. One last note.</p>
+          <p class="vo"><span class="lab">Voice-over</span>Many can see the future. Few know how to lead people there.</p>
+        </div>
+      </div>
+    </section>
+</main>
+<footer><div class="logo">SEE IT. LEAD IT.</div>Qumra Capital · Brand film draft · Not for distribution</footer>
+</body>
+</html>
